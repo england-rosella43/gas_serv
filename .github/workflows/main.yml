@@ -8,8 +8,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -24,8 +24,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -40,8 +40,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -56,8 +56,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -72,8 +72,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -88,8 +88,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -104,8 +104,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -120,8 +120,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -136,8 +136,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
@@ -152,8 +152,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
-        name: Server build start on Port ${{matrix.Port}}
-      - name: Run the Server build process
+        name: Checkout
+      - name: Run Checking
         uses: addnab/docker-run-action@v3
         with:
             image: ${{ secrets.IMAGE }}
