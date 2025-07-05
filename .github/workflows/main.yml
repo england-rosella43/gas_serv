@@ -1,0 +1,163 @@
+name: CRgroup
+on: 
+  workflow_dispatch:
+ 
+jobs:
+ check01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check02:
+    runs-on: ubuntu-latest
+    needs: check01
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check03:
+    runs-on: ubuntu-latest
+    needs: check02
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check04:
+    runs-on: ubuntu-latest
+    needs: check03
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check05:
+    runs-on: ubuntu-latest
+    needs: check04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check06:
+    runs-on: ubuntu-latest
+    needs: check05
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check07:
+    runs-on: ubuntu-latest
+    needs: check06
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check08:
+    runs-on: ubuntu-latest
+    needs: check07
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check09:
+    runs-on: ubuntu-latest
+    needs: check08
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
+
+ check10:
+    runs-on: ubuntu-latest
+    needs: check09
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                curl ipinfo.io
+                sleep 5
+            shell: bash
