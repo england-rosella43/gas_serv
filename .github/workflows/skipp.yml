@@ -1,4 +1,4 @@
-name: CRgroup
+name: Onskip
 on: 
   workflow_dispatch:
  
