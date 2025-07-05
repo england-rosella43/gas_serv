@@ -1,0 +1,37 @@
+name: CI
+on: 
+  workflow_dispatch:
+ 
+jobs:
+ PC:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+         Numb: [1, 2, 3, 4, 5]
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v2
+        name: Check on PC ${{ matrix.Numb }}
+      - name: Run the Checker
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ${{ secrets.IMAGE }}
+            run: |
+                if [ ${{ matrix.Numb }} == "1" ]; then
+                    curl ipinfo.io/ip
+                    sleep 5
+                elif [ ${{ matrix.Numb }} == "2" ]; then
+                    curl ipinfo.io/ip
+                    sleep 5
+                elif [ ${{ matrix.Numb }} == "3" ]; then
+                    curl ipinfo.io/ip
+                    sleep 5
+                elif [ ${{ matrix.Numb }} == "4" ]; then
+                    curl ipinfo.io/ip
+                    sleep 5
+                else
+                    curl ipinfo.io/ip
+                    sleep 5
+                fi
+            shell: bash
