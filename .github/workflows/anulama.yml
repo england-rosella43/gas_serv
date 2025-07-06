@@ -20,6 +20,7 @@ jobs:
             run: |
                 apt update -y && apt install neofetch -y
                 neofetch
-                nproc
+                lscpu
                 pwd
                 ls -al
+                sleep 20
