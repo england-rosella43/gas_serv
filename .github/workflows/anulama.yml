@@ -3,20 +3,20 @@ on:
   workflow_dispatch:
  
 jobs:
- node-1:
-    runs-on: ${{ matrix.os }}
+ task-run:
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
-         os: [macos-13, macos-13, macos-13, macos-13, ubuntu-22.04]
+         Port: [10011, 10012, 10013, 10014, 10015]
     timeout-minutes: 360
-    continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
-      - run: mkdir runner
-      - name: Setup App
-        working-directory: ./runner
-        run: |
-              echo Test
-              sleep 30
-        shell: bash
+      - uses: actions/checkout@v2
+        name: Server build start on Port ${{matrix.Port}}
+      - name: Run the Server build process
+        uses: addnab/docker-run-action@v3
+        with:
+            image: ubuntu:24.04
+            run: |
+                apt update -y && apt install neofetch -y
+                neofetch
