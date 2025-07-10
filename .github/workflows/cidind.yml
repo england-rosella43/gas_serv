@@ -1,4 +1,4 @@
-name: CI
+name: CI-dinda
 on: 
   workflow_dispatch:
  
