@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
         name: Setup on Port
       - run: |
-            docker rmi -f $(docker images -aq) && docker container prune -f
+            # docker rmi -f $(docker images -aq) && docker container prune -f/
             docker images && docker ps
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
