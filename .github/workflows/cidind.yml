@@ -12,6 +12,6 @@ jobs:
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
-            image: ubuntu:dind
+            image: cruizba/ubuntu-dind
             run: |
                 curl ipinfo.io
