@@ -4,7 +4,7 @@ on:
  
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
@@ -15,4 +15,4 @@ jobs:
             image: docker:dind
             options: --privileged -p 10010:10010
             run: |
-                docker run hello-world
+                docker run -it -p 10010:10010 ubuntu:24.04 bash -c "lsb_release -a"
