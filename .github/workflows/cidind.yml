@@ -13,6 +13,6 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
             image: cruizba/ubuntu-dind
-            options: --privileged 
+            options: --privileged -p 10010-10100
             run: |
                 eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
