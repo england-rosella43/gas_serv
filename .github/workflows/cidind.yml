@@ -9,11 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Setup on Port
+      - run: docker ps
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
             image: cruizba/ubuntu-dind
             run: |
+                docker pull ${{ secrets.IMAGE }} &> /dev/null
                 docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c "
                 PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js
                 "
