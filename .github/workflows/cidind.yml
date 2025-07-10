@@ -12,6 +12,6 @@ jobs:
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
-            image: cruizba/ubuntu-dind
+            image: ubuntu:24.04
             run: |
                 eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
