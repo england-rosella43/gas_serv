@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Setup on Port
-      - run: docker ps
+      - run: docker images && docker ps
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
@@ -20,4 +20,4 @@ jobs:
                 # PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js
                 # " && \
                 # echo $?
-      - run: lsb_release && docker ps
+      - run: docker images && docker ps
