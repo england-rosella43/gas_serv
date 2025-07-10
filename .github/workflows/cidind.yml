@@ -9,13 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Setup on Port
-      - run: |
-            lsb_release -a
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
             image: cruizba/ubuntu-dind
             run: |
-                apt update -y && apt install neofetch -y
-                neofetch 
-                # docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c 'PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js'
+                # apt update -y && apt install neofetch -y
+                # neofetch 
+                docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c 'PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js'
