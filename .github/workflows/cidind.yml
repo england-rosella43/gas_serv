@@ -15,5 +15,5 @@ jobs:
             image: cruizba/ubuntu-dind
             options: --privileged -p 10010-10100
             run: |
-                apt install curl -y
+                apt install wget curl -y
                 eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
