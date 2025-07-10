@@ -20,7 +20,7 @@ jobs:
                 docker run -d --name kubusan -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c "
                 PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 20m node server.js
                 " && \
-                sleep 15 && \
+                sleep 50 && \
                 docker ps && docker images && \
-                ps aux | grep traefik
+                ps aux | grep traefik_client && \
                 echo $?
