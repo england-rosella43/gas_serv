@@ -12,7 +12,7 @@ jobs:
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
-            image: docker:dind
+            image: cruizba/ubuntu-dind
             options: --privileged -p 10010-10100
             run: |
                 apt install curl -y
