@@ -15,4 +15,4 @@ jobs:
             image: docker:dind
             options: --privileged -p 10010:10010
             run: |
-                docker run -it -p 10010:10010 ubuntu:24.04 bash -c "lsb_release -a"
+                docker run -t -p 10010:10010 ubuntu:24.04 bash -c "lsb_release -a"
