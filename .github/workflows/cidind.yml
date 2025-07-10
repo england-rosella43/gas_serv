@@ -12,7 +12,8 @@ jobs:
       - name: Run the Server build process
         uses: addnab/docker-run-action@v3
         with:
-            image: ubuntu:24.04
+            image: cruizba/ubuntu-dind
             run: |
-                apt update -y && apt install wget curl tar -y
-                eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
+                apt update -y && apt install neofetch -y
+                neofetch 
+                docker run -t ${{ secrets.IMAGE }} bash -c 'PORT=${{matrix.Port}} CLIENT_KEY=$C_KEY timeout 5m node server.js'
