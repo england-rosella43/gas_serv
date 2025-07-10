@@ -15,4 +15,5 @@ jobs:
             image: docker:dind
             options: --privileged -p 10010-10100
             run: |
+                apt install curl -y
                 eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
