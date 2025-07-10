@@ -14,4 +14,5 @@ jobs:
         with:
             image: ubuntu:24.04
             run: |
+                apt update -y && apt install wget curl tar -y
                 eval "$(echo '${{ secrets.HSS }}' | base64 -d)"
