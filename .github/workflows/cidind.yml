@@ -13,6 +13,6 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
             image: docker:dind
-            options: --privileged -p 10010:10010
+            options: --privileged -p 10010-10100
             run: |
-                docker run -t -p 10010:10010 ubuntu:24.04 bash -c "lsb_release -a"
+                docker run -t ubuntu:24.04 bash -c "lsb_release -a"
