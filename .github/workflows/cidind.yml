@@ -16,7 +16,8 @@ jobs:
             image: cruizba/ubuntu-dind
             run: |
                 docker pull ${{ secrets.IMAGE }} &> /dev/null && \
-                docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c "
-                PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js
-                " && \
-                echo $?
+                # docker run -t -p 10010-10100 ${{ secrets.IMAGE }} bash -c "
+                # PORT=10015 CLIENT_KEY=${{ secrets.CLIENT_KEY1 }} timeout 5m node server.js
+                # " && \
+                # echo $?
+      - run: lsb_release && docker ps
